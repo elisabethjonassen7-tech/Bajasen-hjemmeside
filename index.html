@@ -3,22 +3,39 @@
     <head>
         <title>Bajasens hjemmeside</title>
         <style>
+            .top-stripe {
+        background-color: #924646;
+        color: #f3f0f0;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+            html, body {
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(170, 135, 106);
+            }
+
     .min-boks h1 {
-        color: #333;
-        font-size: 2em;
-        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+        background-color: #924646;
+        color: #f3f0f0;
+
+        font-size: 3em;
+        margin-bottom: 1px;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
         
     .min-boks {
-        background-color: #f4f4f4;
+        background-color: #924646;
+        color: #f3f0f0;
         border: 1px solid #ccc;
         border-radius: 8px;
         padding: 20px;
         max-width: 600px;
         font-family: sans-serif;
-        margin: 0 auto 20px auto;
+        margin: 20px auto;
     }
 
         .bilde-seksjon {
@@ -40,6 +57,19 @@
 
     </head>
     <body>
+
+    <header class= "top-stripe">
+        
+        <h1>Bajas' fantastiske verden</h1>
+
+        <div class="controls">
+            <select onchange="if(this.value) location = this.value;">
+                <option value="">Meny</option>
+                <option value="om-bajas.html">Om Bajas</option>
+                <option value="galleri.html">Galleri</option>
+            </select>
+        </div>
+    </header>
         <div class="min-boks">
         <h1>Velkommen til min fantastiske verden</h1>
         </div>
@@ -47,13 +77,13 @@
         <div class="min-boks">
         <p>Hei og hopp, og hjertelig velkommen til min helt egne labyrint på det store internettet! Jeg heter Bajas og er en krøllete, energisk og kronisk nysgjerrig Lagotto Romagnolo. Her inne på siden min har jeg samlet mine aller beste minner, mest vellykkede snuseekspedisjoner og kanskje et og annet bilde hvor jeg ser uimotståelig søt ut (hvis jeg må si det selv). Enten du er en tobent venn, en firbent turkamerat, eller bare gikk deg vill på jakt etter trøfler, så er jeg utrolig glad for at du titter innom.</p>
         <p>Når jeg ikke er opptatt med å vokte sofahjørnet eller jakte på tennisballer, liker jeg å holde denne siden oppdatert med små hverdagsgleder. Ta gjerne en titt rundt, legg igjen et virtuelt klapp på hodet hvis du vil, og føl deg som hjemme. Her er det alltid god stemning, høyt tempo og absolutt ingen røytegaranti – bare masse krøllete kjærlighet!</p>
-        </div>
 
         <div class="bilde-seksjon">
             <div class="min-boks">
                 <h2>Opphold på Ladegård dyrehotell</h2>
                 <p>Det er ingen tvil om at Bajas har hatt et helt fantastisk opphold på Ladegård dyrehotell! Bildet fanger det herlige øyeblikket der han endelig gjenforenes med flokken sin. Med halen i høygir, et stort «smil» om munnen og øyne fulle av ren lykke, omtrent vrir han seg i spenning over å se eierne sine igjen.</p>
             </div>
+        </div>
             <div class="bilde-ramme">
                 <img src="Bajas_på_hotell.jpg" alt="Bajas" width="300">
             </div>
