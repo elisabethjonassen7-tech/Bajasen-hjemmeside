@@ -6,39 +6,38 @@
     html, body {
         margin: 0px;
         padding: 0px;
-        background-color: rgb(175, 158, 144);
+        background-color: rgb(223, 212, 204);
     }
     .top-stripe {
-        background-color: #924646;
-        color: #f3f0f0;
+        background-color: #926446;
+        color: black;
         padding: 10px;
         margin-bottom: 20px;
     }
-    .min-boks h1 {
+    .hoved-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: calc(100vh - 120px);
+        padding: 1px;
+        margin: 1px;
+        gap: 20px;
+    }
+    .min-boks {
         display: block;
+        grid-column: 1 / 4;
+        grid-row: 1;
         text-align: center;
-        background-color: #924646;
+        background-color: #947861;
         color: #f3f0f0;
-
-        font-size: 3em;
-        margin-bottom: 1px;
-        padding-top: 10px;
-        padding-bottom: 0px;
+        font-size: 24px;
+        padding: 0%;
     }
         
-    .min-boks {
-        background-color: #924646;
-        color: #f3f0f0;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 20px;
-        max-width: 600px;
-        font-family: sans-serif;
-        margin: 20px auto;
-    }
 
-        .bilde-seksjon {
-        display: flex;
+    .bilde-seksjon {
+        grid-column: 3 / 7;
+        grid-row: 2;
         justify-content: space-between;
         align-items: center;
         max-width: 600px;
@@ -46,14 +45,14 @@
         gap: 20px;
     }
         .bilde-ramme {
+        grid-column: 4;
+        grid-row: 1;
         border: 2px solid black;
-        border-radius: 10px;
         max-width:fit-content;
-        margin: 20px auto;
+        margin: 20px;
     }
         .bilde-ramme2 {
         border: 2px solid black;
-        border-radius: 10px;
         max-width: fit-content;
         margin: 0;
     }
@@ -76,27 +75,27 @@
             </select>
         </div>
     </header>
+    <div class="hoved-grid">
         <div class="min-boks">
         <h1>Velkommen til min fantastiske verden</h1>
-        </div>
-
-        <div class="min-boks">
         <p>Hei og hopp, og hjertelig velkommen til min helt egne labyrint på det store internettet! Jeg heter Bajas og er en krøllete, energisk og kronisk nysgjerrig Lagotto Romagnolo. Her inne på siden min har jeg samlet mine aller beste minner, mest vellykkede snuseekspedisjoner og kanskje et og annet bilde hvor jeg ser uimotståelig søt ut (hvis jeg må si det selv). Enten du er en tobent venn, en firbent turkamerat, eller bare gikk deg vill på jakt etter trøfler, så er jeg utrolig glad for at du titter innom.</p>
         <p>Når jeg ikke er opptatt med å vokte sofahjørnet eller jakte på tennisballer, liker jeg å holde denne siden oppdatert med små hverdagsgleder. Ta gjerne en titt rundt, legg igjen et virtuelt klapp på hodet hvis du vil, og føl deg som hjemme. Her er det alltid god stemning, høyt tempo og absolutt ingen røytegaranti – bare masse krøllete kjærlighet!</p>
+
         </div>
+
         <div class="bilde-seksjon">
-            <div class="min-boks">
                 <h2>Opphold på Ladegård dyrehotell</h2>
                 <p>Det er ingen tvil om at Bajas har hatt et helt fantastisk opphold på Ladegård dyrehotell! Bildet fanger det herlige øyeblikket der han endelig gjenforenes med flokken sin. Med halen i høygir, et stort «smil» om munnen og øyne fulle av ren lykke, omtrent vrir han seg i spenning over å se mamma og storesøster igjen.</p>
             </div>
         
         
             <div class="bilde-ramme">
-                <img src="Bajas_på_hotell.jpg" alt="Bajas" width="300">
+                <img src="Bajas_på_hotell.jpg" alt="Bajas" width="300"><p>Bajas og storesøster foran kennelen</p>
             </div>
             <div class="bilde-ramme2">
                 <img src="B.png" alt="Bajas2" width="300px">
             </div>
         </div>
+    </div>
     </body>
 </html>
