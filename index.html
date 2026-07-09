@@ -20,52 +20,59 @@
     }
     .hoved-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        height: calc(100vh - 120px);
+        grid-template-columns: 1fr 1fr 1fr;
+        min-height: calc(100vh - 120px);
         padding: 1px;
         margin: 1px;
         gap: 20px;
     }
     .min-boks {
-        display: block;
-        grid-column: 1 / 4;
-        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        grid-column: span 2;
+        flex-wrap: wrap;
+        max-width: 550px;
+        width: 100%;
         text-align: center;
         background-color: #947861;
         color: #f3f0f0;
         font-size: 24px;
-        padding: 0%;
-        align-self: end;
+        padding: 2%;
+        margin: 20px;
+        align-self: center;
     }
         
 
     .bilde-seksjon {
-        grid-column: 3 / 7;
-        grid-row: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-column: auto;
+        grid-row: auto;
         justify-content: space-between;
-        max-width: 600px;
+        min-width: 550px;
+        width: 100%;
         margin: 20px auto;
         gap: 20px;
-        align-self: end;
+        align-self: flex-start;
     }
         .bilde-ramme {
-        grid-column: 4;
-        grid-row: 2;
+            grid-column: auto;
+            grid-row: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
         width:100%;
         height: 100%;
         object-fit: contain;
-        margin: 20px;
-        align-content: start;
+        margin: 30px;
+        padding: 20px;
+        align-content: flex-start;
     }
-        .bilde-ramme2 {
-            grid-column: 5;
-            grid-row: 2;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        margin: 20px;
-        align-content: start;
+    @media (max-width: 768px) {
+        .hoved-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
     }
 
         </style>
@@ -102,10 +109,8 @@
         
             <div class="bilde-ramme">
                 <img src="Bajas_på_hotell.jpg" alt="Bajas" width="300">
+                <img src="B.png" alt="Bajas2" width="300">
                </div>
-            <div class="bilde-ramme2">
-                <img src="B.png" alt="Bajas2" width="300px">
-            </div>
         </div>
     </div>
     </body>
