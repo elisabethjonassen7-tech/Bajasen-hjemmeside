@@ -20,59 +20,44 @@
     }
     .hoved-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        min-height: calc(100vh - 120px);
-        padding: 1px;
-        margin: 1px;
-        gap: 20px;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 1em;
+        background-color: bisque;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas:
+        "boks-1 boks-1 boks-2 boks-2"
+        "boks-1 boks-1 boks-3 boks-4";
     }
-    .min-boks {
-        display: flex;
-        flex-direction: column;
-        grid-column: span 2;
-        flex-wrap: wrap;
-        max-width: 550px;
-        width: 100%;
-        text-align: center;
-        background-color: #947861;
-        color: #f3f0f0;
-        font-size: 24px;
-        padding: 2%;
-        margin: 20px;
-        align-self: center;
-    }
-        
+            @media(max-width: 56em) {
+                .hoved-grid{
+                    grid-template-areas:
+                    "boks-1 boks-1 boks-2"
+                    "boks-1 boks-1 boks-3"
+                    "boks-4 boks-5 boks-5";
+                }
+            }
+            @media(max-width: 50em){
+                .hoved-grid {
+                    grid-template-areas:
+                    "boks-1 boks-2"
+                    "boks-3 boks-2"
+                    "boks-3 boks-4"
+                    "boks-5 boks-4";
+                }
+            }
+   
 
-    .bilde-seksjon {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        grid-column: auto;
-        grid-row: auto;
-        justify-content: space-between;
-        min-width: 550px;
-        width: 100%;
-        margin: 20px auto;
-        gap: 20px;
-        align-self: flex-start;
-    }
-        .bilde-ramme {
-            grid-column: auto;
-            grid-row: auto;
-            flex-direction: row;
-            flex-wrap: wrap;
-        width:100%;
-        height: 100%;
-        object-fit: contain;
-        margin: 30px;
-        padding: 20px;
-        align-content: flex-start;
-    }
     @media (max-width: 768px) {
         .hoved-grid {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
         }
+    }
+    .boks-1 {
+        background-color: #947861;
+
     }
 
         </style>
@@ -94,21 +79,23 @@
         </div>
     </header>
     <div class="hoved-grid">
-        <div class="min-boks">
+        <div class="boks" style="grid-area: boks-1">
         <h1>Velkommen til min fantastiske verden</h1>
         <p>Hei og hopp, og hjertelig velkommen til min helt egne labyrint på det store internettet! Jeg heter Bajas og er en krøllete, energisk og kronisk nysgjerrig Lagotto Romagnolo. Her inne på siden min har jeg samlet mine aller beste minner, mest vellykkede snuseekspedisjoner og kanskje et og annet bilde hvor jeg ser uimotståelig søt ut (hvis jeg må si det selv). Enten du er en tobent venn, en firbent turkamerat, eller bare gikk deg vill på jakt etter trøfler, så er jeg utrolig glad for at du titter innom.</p>
         <p>Når jeg ikke er opptatt med å vokte sofahjørnet eller jakte på tennisballer, liker jeg å holde denne siden oppdatert med små hverdagsgleder. Ta gjerne en titt rundt, legg igjen et virtuelt klapp på hodet hvis du vil, og føl deg som hjemme. Her er det alltid god stemning, høyt tempo og absolutt ingen røytegaranti – bare masse krøllete kjærlighet!</p>
 
         </div>
 
-        <div class="bilde-seksjon">
+        <div class="boks" style="grid-area: boks-2">
                 <h2>Opphold på Ladegård dyrehotell</h2>
                 <p>Det er ingen tvil om at Bajas har hatt et helt fantastisk opphold på Ladegård dyrehotell! Bildet fanger det herlige øyeblikket der han endelig gjenforenes med flokken sin. Med halen i høygir, et stort «smil» om munnen og øyne fulle av ren lykke, omtrent vrir han seg i spenning over å se mamma og storesøster igjen.</p>
             </div>
         
         
-            <div class="bilde-ramme">
+            <div class="boks" style="grid-area: boks-3">
                 <img src="Bajas_på_hotell.jpg" alt="Bajas" width="300">
+                </div>
+            <div class="boks" style="grid-area: boks-4;">
                 <img src="B.png" alt="Bajas2" width="300">
                </div>
         </div>
