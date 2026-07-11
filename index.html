@@ -19,22 +19,34 @@
         color: #2b2b2b;
         height: 100px;
         padding: 0 40px;
-        display:flex;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 20px;
         justify-content: space-between;
         align-items: center;
         border-top: 5px solid #947861;
     }
+    .h1-sideoverskrift {
+        color: black;
+        font-size: 36px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        grid-column: span 2;
+        grid-row: 1;
+    }
+    .controls {
+        grid-column: 3;
+        grid-row: 3;
+        justify-self: end;
+        color: #2b2b2b;
+    }
     .hoved-grid {
         display: grid;
-        grid-auto-columns: 1fr;
-        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr;
         gap: 1em;
-        background-color: bisque;
         align-items: center;
         justify-items: center;
         grid-template-areas:
-        "boks-1 boks-1 boks-2 boks-2"
-        "boks-1 boks-1 boks-3 boks-4";
     }
             @media(max-width: 56em) {
                 .hoved-grid{
@@ -57,8 +69,28 @@
 
     
     .boks-1 {
+        display: grid;
         background-color: #947861;
+        border: 1px solid black;
+        grid-column: 2/4;
+        grid-row: 2;
+        align-items: center;
+        height: 400px;
+        width: 600px;
+        padding: 20px;
 
+    }
+    .bilderamme {
+        height: 500px;
+        grid-column: 3/5;
+        grid-row: 2/4;
+        align-items: end;    
+    }
+
+    .bilderamme img {
+        width: auto;
+        height: 600px;
+        display: block;
     }
 
         </style>
@@ -67,8 +99,8 @@
     <body>
 
     <header class= "top-stripe">
+        <div class="h1-sideoverskrift">Bajas' fantastiske verden</div>
         
-        <h1>Bajas' fantastiske verden</h1>
 
         <div class="controls">
             <select onchange="if(this.value) location = this.value;">
@@ -80,26 +112,17 @@
         </div>
     </header>
     <div class="hoved-grid">
-        <div class="boks" style="grid-area: boks-1">
+        <div class="boks-1">
         <h1>Velkommen til min fantastiske verden</h1>
         <p>Hei og hopp, og hjertelig velkommen til min helt egne labyrint på det store internettet! Jeg heter Bajas og er en krøllete, energisk og kronisk nysgjerrig Lagotto Romagnolo. Her inne på siden min har jeg samlet mine aller beste minner, mest vellykkede snuseekspedisjoner og kanskje et og annet bilde hvor jeg ser uimotståelig søt ut (hvis jeg må si det selv). Enten du er en tobent venn, en firbent turkamerat, eller bare gikk deg vill på jakt etter trøfler, så er jeg utrolig glad for at du titter innom.</p>
         <p>Når jeg ikke er opptatt med å vokte sofahjørnet eller jakte på tennisballer, liker jeg å holde denne siden oppdatert med små hverdagsgleder. Ta gjerne en titt rundt, legg igjen et virtuelt klapp på hodet hvis du vil, og føl deg som hjemme. Her er det alltid god stemning, høyt tempo og absolutt ingen røytegaranti – bare masse krøllete kjærlighet!</p>
 
         </div>
+    
+    <div class="bilderamme">
+        <img src="b-portrett.png"
+    </div>
 
-        <div class="boks" style="grid-area: boks-2">
-                <h2>Opphold på Ladegård dyrehotell</h2>
-                <p>Det er ingen tvil om at Bajas har hatt et helt fantastisk opphold på Ladegård dyrehotell! Bildet fanger det herlige øyeblikket der han endelig gjenforenes med flokken sin. Med halen i høygir, et stort «smil» om munnen og øyne fulle av ren lykke, omtrent vrir han seg i spenning over å se mamma og storesøster igjen.</p>
-            </div>
-        
-        
-            <div class="boks" style="grid-area: boks-3">
-                <img src="Bajas_på_hotell.jpg" alt="Bajas" width="300">
-                </div>
-            <div class="boks" style="grid-area: boks-4;">
-                <img src="B.png" alt="Bajas2" width="300">
-               </div>
-        </div>
     </div>
     </body>
 </html>
